@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import sys
 
 
@@ -51,18 +54,18 @@ class ConvertMorse(object):
     def initial(self):
         opt = 0
         while int(opt) != 3:
-            print('Seleccione la opcíon deseada:')
-            print('1) traducir código morse :')
-            print('2) traducir texto a  código morse :')
+            print('Seleccione la opcion deseada:')
+            print('1) traducir codigo morse :')
+            print('2) traducir texto a  codigo morse :')
             print('3) Cerrar :')
 
-            opt = input("Opción:  ")
+            opt = input("Opcion:  ")
 
             try:
 
                 if int(opt) == 1:
 
-                    morse_code = input("Ingrese código morse a traducir:  ")
+                    morse_code = input("Ingrese codigo morse a traducir:  ")
                     print('-' * 20)
                     alpha = self.morse_to_alphabet(morse_code)
 
@@ -77,14 +80,11 @@ class ConvertMorse(object):
                     print('-' * 20)
 
                 elif int(opt) == 3:
-                    print('Terminando Ejecución')
+                    print('Terminando Ejecucion')
                     sys.exit(0)
             except ValueError:
                 opt = 0
-                print('Solo se aceptan númeoros')
-
-
-
+                print('Solo se aceptan numeoros')
 
 
     def morse_to_alphabet(self,morse_code):
